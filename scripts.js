@@ -1,14 +1,14 @@
-let pounds = document.querySelector('.pounds'),
- kilograms = document.querySelector('.kilograms'),
- grams = document.querySelector('.grams'),
- ounces = document.querySelector('.ounces'),
- form = document.querySelector('form'),
- 
- form.addEventListener('input', convertWeight);
+const name = document.querySelector('#password');
+const eyeIcon = document.querySelector('#eye');
 
-
-function convertWeight(e){
-  if(e.target.classList.contains('pounds')){
-console.log('wahala');
+eyeIcon.addEventListener('click', () => {
+  if (eyeIcon.classList.contains('fa-eye')) {
+    password.setAttribute('type', 'text');
+    // eyeIcon.classList.remove('fa-eye');
+    // eyeIcon.classList.add('fa-eye-slash');
+    eyeIcon.classList.replace('fa-eye', 'fa-eye-slash');
+  } else {
+    password.setAttribute('type', 'password');
+    eyeIcon.classList.replace('fa-eye-slash', 'fa-eye');
   }
- }
+});
